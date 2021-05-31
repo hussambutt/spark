@@ -6,6 +6,8 @@ services:
       context: .
       dockerfile: ./Dockerfile
     image: spark_master
+    stdin_open: true 
+    tty: true
     env_file:
       - spark.env
     environment:
