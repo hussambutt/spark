@@ -16,7 +16,7 @@ jobs:
 
       - run: |
           docker-compose exec spark which pyspark
-          docker-compose exec spark pyspark
+          docker-compose exec spark -T pyspark
 
       - name: Stop containers
         if: always()
