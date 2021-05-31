@@ -15,9 +15,9 @@ jobs:
         run: docker-compose up -d --build
 
       - run: |
-          # docker-compose exec -T spark which pyspark
-          docker-compose exec -T spark pyspark
-
+          docker-compose exec -T spark which pyspark
+          docker-compose exec -T spark python3 -c 'import pyspark; print(pyspark)'
+          
       - name: Stop containers
         if: always()
         run: docker-compose down
