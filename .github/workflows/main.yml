@@ -15,7 +15,7 @@ jobs:
         run: docker-compose up -d --build
 
       - run: |
-          docker-compose exec -T spark which pyspark
+          # docker-compose exec -T spark which pyspark
           docker-compose exec -T spark pyspark
 
       - name: Stop containers
