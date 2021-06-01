@@ -14,6 +14,8 @@ services:
       - SPARK_MODE=master
     ports:
       - '8080:8080'
+    volumes:
+      - ".:/app"
 
   spark-worker-1: &spark-worker
     build:

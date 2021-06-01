@@ -15,8 +15,8 @@ jobs:
         run: docker-compose up -d --build
 
       - run: |
-          docker-compose exec -T spark which pyspark
-          docker-compose exec -T spark pyspark -c "sc._gateway.jvm.org.apache.hadoop.util.VersionInfo.getVersion()"
+          docker-compose exec -T spark python3 /app/hadoopVersion.py
+          docker-compose exec -T spark python3 /app/pysparkTest.py
  
       - name: Stop containers
         if: always()
