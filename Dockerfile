@@ -6,3 +6,5 @@ RUN pip install wheel && \
     pip3 install \
     pyspark==2.4.6 \
     pyarrow==0.14
+
+WORKDIR /app
